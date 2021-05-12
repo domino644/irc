@@ -103,7 +103,7 @@ function sendMessage() {
 function displayMessage(user, message, color) {
     let cont = document.createElement('div')
     cont.setAttribute('class', 'message')
-    cont.innerHTML = `<b style="color: ${color}">${user}|</b> ${message}`
+    cont.innerHTML = `<b style="color: ${color}">${user}|</b><p style="word-wrap: break-word;"> ${message}</p>`
     if (emoticon) {
         $(cont).emoticonize(true);
     }
