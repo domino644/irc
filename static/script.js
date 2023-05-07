@@ -30,6 +30,7 @@ function setNick() {
             action: "load",
         }),
     })
+        .catch((err) => console.log(err))
         .then((res) => res.json())
         .then((data) => {
             for (let message of data.messages) {
@@ -59,6 +60,7 @@ async function alp() {
             nick: nick,
         }),
     })
+        .catch((err) => console.log(err))
         .then((res) => res.json())
         .then((data) => displayMessage(data.nick, data.message, data.color))
         .finally(() => alp());
