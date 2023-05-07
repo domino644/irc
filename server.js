@@ -30,7 +30,7 @@ app.post("/", (req, res) => {
                 color: req.body.color,
             };
             messages.push(obj);
-            old_messages.push(obj);
+            old_messages.shift(obj);
             for (let res of connections) {
                 for (let mess of messages) {
                     res.end(JSON.stringify(mess));
