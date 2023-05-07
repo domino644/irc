@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="./script.js" defer></script>
+    <script src="./dist/perfect-scrollbar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./perfect-scrollbar.css">
+    <link rel="shortcut icon" href="../gpx/favicon.png" type="image/x-icon">
+    <link href="./emoticons/stylesheets/jquery.cssemoticons.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="./emoticons/javascripts/jquery-1.4.2.min.js" type="text/javascript" defer></script>
+    <script src="./emoticons/javascripts/jquery.cssemoticons.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div id='form'>
+        <input type="text" name="nick" id="input" placeholder="Your nick..." required>
+        <button onclick="setNick()">Join!</button>
+    </div>
+    <div id="chat-cont">
+        <p>commands: /emoticons /color /quit</p>
+        <div id="chat">
+        </div>
+        <div id="messager-cont">
+            <input type="text" id="messager">
+            <button onclick="sendMessage()" id="btn">Send</button>
+        </div>
+    </div>
+</body>
+
+</html>
