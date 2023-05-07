@@ -23,7 +23,7 @@ function setNick() {
     form.style.display = "none";
     chatCont.style.display = "flex";
     document.title = "Chat";
-    fetch(window.location.href + "/", {
+    fetch("/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
@@ -97,7 +97,7 @@ function sendMessage() {
                 messager.value = "";
             }
         } else {
-            fetch(window.location.href + "/", {
+            fetch("/", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
