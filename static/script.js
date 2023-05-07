@@ -33,7 +33,7 @@ function setNick() {
         .catch((err) => console.log(err))
         .then((res) => res.json())
         .then((data) => {
-            for (let message of data.messages) {
+            for (let message of data.messages.reverse()) {
                 displayMessage(message.nick, message.message, message.color);
             }
         });
@@ -57,8 +57,8 @@ async function alp() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
             action: "alp",
-            nick: nick
-        })
+            nick: nick,
+        }),
     })
         .catch((err) => console.log(err))
         .then((res) => res.json())
