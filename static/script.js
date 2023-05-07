@@ -52,13 +52,13 @@ function setNick() {
 
 async function alp() {
     console.log("wysylam alp");
-    fetch(window.location.href + "/", {
+    fetch("/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
             action: "alp",
-            nick: nick,
-        }),
+            nick: nick
+        })
     })
         .catch((err) => console.log(err))
         .then((res) => res.json())
